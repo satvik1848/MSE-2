@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeFinder | Properties</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header"><a class="logo" href="index.html">Home<span>Finder</span></a>
+    <nav><a href="index.html">Home</a><a class="active" href="listings.html">Buy / Rent</a><a href="emi.html">EMI
+        Calculator</a><a href="post-property.html">Post Property</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main class="section">
+    <p class="eyebrow">YOUR SEARCH STARTS HERE</p>
+    <h1 class="page-title">Find your perfect property</h1>
+    <div class="filter-panel">
+      <label>City <select id="cityFilter">
+          <option value="all">All cities</option>
+          <option>Ghaziabad</option>
+          <option>Noida</option>
+          <option>Delhi</option>
+        </select></label>
+      <label>BHK <select id="bhkFilter">
+          <option value="all">Any BHK</option>
+          <option value="2">2 BHK</option>
+          <option value="3">3 BHK</option>
+          <option value="4">4 BHK</option>
+        </select></label>
+      <label class="range-label">Maximum price: <strong id="priceValue">₹1.5 Cr</strong><input id="priceFilter"
+          type="range" min="2000000" max="15000000" step="500000" value="15000000"></label>
+      <button class="btn btn-small" id="resetFilters">Reset filters</button>
+    </div>
+    <div class="toolbar">
+      <p id="resultCount">Showing all properties</p>
+      <p>Select up to two homes to compare.</p>
+    </div>
+    <div class="property-grid" id="listingGrid">
+      <article class="property-card listing-item" data-city="Ghaziabad" data-bhk="3" data-price="8500000"><img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900" alt="Modern villa">
+        <div class="property-info"><span class="tag">For Sale</span>
+          <h3>Modern Family Villa</h3>
+          <p>📍 Indirapuram, Ghaziabad</p>
+          <p>3 BHK · 1,800 sq.ft.</p><strong>₹85,00,000</strong>
+          <div class="card-actions"><a href="property.html">Details</a><button class="text-button favorite-btn">♡
+              Save</button><label class="compare-check"><input type="checkbox" class="compare-box"
+                value="Modern Family Villa"> Compare</label></div>
+        </div>
+      </article>
+      <article class="property-card listing-item" data-city="Ghaziabad" data-bhk="2" data-price="4200000"><img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900" alt="Apartment">
+        <div class="property-info"><span class="tag rent">For Rent</span>
+          <h3>Bright City Apartment</h3>
+          <p>📍 Vaishali, Ghaziabad</p>
+          <p>2 BHK · 1,100 sq.ft.</p><strong>₹42,00,000</strong>
+          <div class="card-actions"><a href="property.html">Details</a><button class="text-button favorite-btn">♡
+              Save</button><label class="compare-check"><input type="checkbox" class="compare-box"
+                value="Bright City Apartment"> Compare</label></div>
+        </div>
+      </article>
+      <article class="property-card listing-item" data-city="Noida" data-bhk="3" data-price="9800000"><img
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=900" alt="Garden home">
+        <div class="property-info"><span class="tag">For Sale</span>
+          <h3>Peaceful Garden Home</h3>
+          <p>📍 Sector 50, Noida</p>
+          <p>3 BHK · 2,000 sq.ft.</p><strong>₹98,00,000</strong>
+          <div class="card-actions"><a href="property.html">Details</a><button class="text-button favorite-btn">♡
+              Save</button><label class="compare-check"><input type="checkbox" class="compare-box"
+                value="Peaceful Garden Home"> Compare</label></div>
+        </div>
+      </article>
+      <article class="property-card listing-item" data-city="Delhi" data-bhk="4" data-price="14500000"><img
+          src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=900" alt="Large home">
+        <div class="property-info"><span class="tag">For Sale</span>
+          <h3>Spacious Family House</h3>
+          <p>📍 Dwarka, Delhi</p>
+          <p>4 BHK · 2,400 sq.ft.</p><strong>₹1,45,00,000</strong>
+          <div class="card-actions"><a href="property.html">Details</a><button class="text-button favorite-btn">♡
+              Save</button><label class="compare-check"><input type="checkbox" class="compare-box"
+                value="Spacious Family House"> Compare</label></div>
+        </div>
+      </article>
+    </div>
+    <section class="compare-panel" id="comparePanel" hidden>
+      <h2>Compare properties</h2>
+      <div id="compareOutput"></div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 HomeFinder. Student project made with HTML, CSS and JavaScript.</p>
+  </footer>
+</body>
+
+</html>

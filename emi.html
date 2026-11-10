@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeFinder | EMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header"><a class="logo" href="index.html">Home<span>Finder</span></a>
+    <nav><a href="index.html">Home</a><a href="listings.html">Buy / Rent</a><a class="active" href="emi.html">EMI
+        Calculator</a><a href="post-property.html">Post Property</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main class="section narrow">
+    <p class="eyebrow">PLAN YOUR HOME LOAN</p>
+    <h1 class="page-title">Home loan EMI calculator</h1>
+    <p class="intro">Enter your loan details to estimate your monthly payment.</p>
+    <div class="calculator-card">
+      <label>Loan amount (₹)<input type="number" id="loanAmount" value="5000000" min="1"></label>
+      <label>Annual interest rate (%)<input type="number" id="interestRate" value="8.5" min="0" step="0.1"></label>
+      <label>Loan period (years)<input type="number" id="loanYears" value="20" min="1" max="40"></label>
+      <button class="btn" id="calculateEMI">Calculate EMI</button>
+      <div class="emi-result" aria-live="polite">
+        <p>Estimated monthly EMI</p>
+        <h2 id="emiValue">₹43,391</h2>
+        <div class="result-grid">
+          <div><span>Total interest</span><strong id="interestValue">₹54,13,840</strong></div>
+          <div><span>Total payment</span><strong id="totalValue">₹1,04,13,840</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="info-note">
+      <h3>Formula used</h3>
+      <p>EMI = P × r × (1 + r)<sup>n</sup> ÷ ((1 + r)<sup>n</sup> − 1)</p>
+      <p>P = loan amount, r = monthly interest rate, n = total number of monthly payments.</p>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 HomeFinder. This calculator gives an estimate only.</p>
+  </footer>
+</body>
+
+</html>

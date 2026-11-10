@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeFinder | Post Property</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header"><a class="logo" href="index.html">Home<span>Finder</span></a>
+    <nav><a href="index.html">Home</a><a href="listings.html">Buy / Rent</a><a href="emi.html">EMI Calculator</a><a
+        class="active" href="post-property.html">Post Property</a><a href="contact.html">Contact</a></nav>
+  </header>
+  <main class="section narrow">
+    <p class="eyebrow">LIST WITH HOMEFINDER</p>
+    <h1 class="page-title">Post your property</h1>
+    <p class="intro">Fill in the details below to create a sample property listing.</p>
+    <form class="form-card" id="propertyForm">
+      <label>Your name<input type="text" id="ownerName" placeholder="Enter your name" required></label>
+      <label>Email address<input type="email" id="ownerEmail" placeholder="you@example.com" required></label>
+      <label>Property title<input type="text" id="propertyTitle" placeholder="e.g. 3 BHK apartment" required></label>
+      <div class="two-fields"><label>City<input type="text" id="propertyCity" placeholder="City"
+            required></label><label>BHK<select id="propertyBhk">
+            <option>1 BHK</option>
+            <option>2 BHK</option>
+            <option selected>3 BHK</option>
+            <option>4 BHK</option>
+          </select></label></div>
+      <label>Expected price (₹)<input type="number" id="propertyPrice" min="1" placeholder="Enter price"
+          required></label>
+      <label>Property image<input type="file" id="propertyImage" accept="image/*"></label>
+      <img id="imagePreview" class="image-preview" alt="Selected property preview" hidden>
+      <button class="btn" type="submit">Submit property</button>
+      <p id="formMessage" class="form-message" aria-live="polite"></p>
+    </form>
+  </main>
+  <footer>
+    <p>© 2026 HomeFinder. Demo form: details are not uploaded to a server.</p>
+  </footer>
+</body>
+
+</html>
